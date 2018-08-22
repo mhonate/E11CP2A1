@@ -1,0 +1,33 @@
+
+
+<h1>Landing</h1>
+
+<p>Lista de todos los estudiantes</p>
+
+<!-- desde aqui se iteran los estudiantes para mostrarlos en una tabla-->
+
+<% @students.each do |student| %>
+
+      <div class="well">
+      <table>
+        <tr>
+         <td><strong> Nombre Estudiante </strong></td>
+         <td><strong> Edad </strong></td>
+         <td><strong> Email </strong></td>
+        </tr>
+
+        <tr> 
+        	<td> <%= student.name %> </td>
+        	<td><%= student.age %></td>
+          	<td><%= student.email %></td>
+        </tr>
+  
+      </table>
+         <!-- <%= link_to 'Show', student, class: 'btn btn-primary'%>
+          <%= link_to 'Edit', edit_student_path(student), class: 'btn btn-warning' %>
+          <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>-->
+
+      </div>
+    
+    <% end %>
+
